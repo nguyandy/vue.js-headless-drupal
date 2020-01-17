@@ -1,0 +1,20 @@
+var path = require('path')
+
+module.exports = {
+devServer: {
+    host: 'localhost',
+    hot: true,
+    port: 1024,
+    },
+
+  productionSourceMap: false,
+  configureWebpack: {
+    resolve: {
+      alias: {
+        src: path.resolve(__dirname, 'src'),
+        js: path.resolve(__dirname, 'src/assets/js'),
+        components: path.resolve(__dirname, 'src/components'),
+      }
+    },
+  }
+}
